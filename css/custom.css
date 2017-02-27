@@ -1,0 +1,16 @@
+/*
+Fonts, using in website:
+font-family: 'Roboto', sans-serif;
+*/
+
+/*-----------------CSS reset-------------------*/
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+body { margin: 0; border: 0; padding: 0; outline: 0; vertical-align: baseline; background: transparent; font: 17px/28px 'Roboto', sans-serif; color: #424242; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+input, button, textarea { -webkit-appearance: none; outline: none;}
+h1, h2, h3, h4, h5, h6 { font-weight:normal;}
+ol, ul, li { list-style: none; margin: 0; padding: 0;}
+img { max-width: 100%; border: none; outline: none;}
+a, a:link, a:visited { color: #0264a9; font-weight: normal; text-decoration: none; outline: none;}
+/*----------------- End CSS reset-------------------*/
+
+
