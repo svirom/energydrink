@@ -176,8 +176,7 @@ footer.main_footer .copyright img { width: auto; }
 .main.products_page .products_row .products_cell .caption h2.new { font-size: 60px; }
 .main.products_page .products_row .products_cell a:hover .caption h2,
 .main.products_page .products_row .products_cell a:hover .caption p {color: #99999B;}
-.main.products_page .products_row .products_cell a span img { position: absolute; left: 50%; top: 15%; width: auto; height: 70%; -ms-transform: translate(-80%, 0); -webkit-transform: translate(-80%, 0); -o-transform: translate(-80%, 0); -moz-transform: translate(-80%, 0); transform: translate(-80%, 0); -o-transition: all 0.5s; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s;}
-.main.products_page .products_row .products_cell.left a span img {-ms-transform: translate(-20%, 0); -webkit-transform: translate(-20%, 0); -o-transform: translate(-20%, 0); -moz-transform: translate(-20%, 0); transform: translate(-20%, 0);}
+.main.products_page .products_row .products_cell a span img { position: absolute; left: 50%; top: 15%; width: auto; height: 70%; -ms-transform: translate(-50%, 0); -webkit-transform: translate(-50%, 0); -o-transform: translate(-50%, 0); -moz-transform: translate(-50%, 0); transform: translate(-50%, 0); -o-transition: all 0.5s; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s;}
 .main.products_page .products_row .products_cell a:hover span img { height: 80%; top: 10%;}
 @media (max-width: 1199px) {
 	.main.products_page .products_row .products_cell .caption h2 { font-size: 70px; }
