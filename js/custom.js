@@ -19,7 +19,7 @@ $(document).ready(function(){
 //accordion single product page
   $(".accordion .accord_item>p").click(function() {
     if ($(this).next("div").is(":visible")) {
-      $(this).next("div").slideUp("slow").removeClass('active');
+      $(this).next("div").slideUp("slow").prev('p').removeClass('active');
       $(".accordion:first-of-type .accord_content").slideUp("slow");
     } else {
       $(".accordion .accord_content").slideUp("slow").prev('p').removeClass('active');
