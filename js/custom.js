@@ -26,5 +26,50 @@ $(document).ready(function(){
       $(this).toggleClass('active').next("div").slideToggle("slow");
     }
   });
+
+  //Popup close
+    $('a[data-js="close_form"]').click(function(){
+      event.preventDefault();
+      $('.popup').fadeOut(300);
+    });
+
+//contacts form
+  $('#contacts_form').submit(send_form);
+
+  function send_form() {
+    var t = $(this);
+    var fields = 'input:not([type="submit"])';
+    event.preventDefault();
+    t.find(fields).each(function() {
+      if ($(this).val() == 0) {
+        $(this).addClass('error');
+      } else {
+        $(this).removeClass('error');
+      }
+    });
+    if (t.find('.error').length > 0) { 
+      return false;
+    } else {
+      var form_data = t.serialize();
+      $.ajax({
+        type: 'POST',
+        url: 'sendmail.php',
+        data: form_data,
+        success: function() {
+          $('.popup').fadeIn(300);
+          t.find(fields).each(function() {
+            $(this).val('');
+          });
+          t.find('textarea').val('');
+        },
+        error: function() {
+          alert("It's not OK");
+        }
+
+      });
+    }
+    return false;
+  }
+
  
 });

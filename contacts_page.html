@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Energydrink</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:900|Roboto:100,300,400,500" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+</head>
+<body>
+
+<!-- Main Header -->
+	<header class="main_header">
+		<a class="logo" href="index.html"><img src="img/main_logo.png" alt="Energydrink"></a>
+		<a class="nav-opener"><span></span></a>
+        <nav id="main_menu">
+            <ul>
+            	<li><a href="products_page.html">MTVUP! Продукты</a></li>
+                <li><a href="blanc_page.html">Карта</a></li>
+                <li><a href="blanc_page.html">Партнерам</a></li>
+                <li><a href="contacts_page.html">Контакты</a></li>
+            </ul>
+        </nav>
+	</header>
+<!-- End Main Header -->
+
+<!-- Main Content -->
+	<div class="main contacts_page">
+		<div class="contacts_header">
+			<h2>Контакты.</h2>
+			<p>Генеральный представитель России.</p>
+		</div>
+		<div class="contacts_form">
+			<form id="contacts_form" action="/" method="post">
+				<label for="contacts_select">Вы хотите:</label>
+				<select id="contacts_select" name="sel">
+					<option value="0"></option>
+	            	<option value="come">Прийти</option>
+	            	<option value="out">Уйти</option>
+	            	<option value="take">Взять</option>
+	            	<option value="give">Отдать</option>
+	            </select>
+	            <label for="contacts_name">Компания:</label>
+	            <input id="contacts_name" type="text" name="name" placeholder="" autocomplete="off">
+	            <p class="required">обязательное поле</p>
+	            <label for="contacts_full_name">Полное фирменное наименование:</label>
+	            <input id="contacts_full_name" type="text" name="full_name" placeholder="" autocomplete="off">
+	            <p class="required">обязательное поле</p>
+	            <label for="contacts_email">Ваш электронный адрес:</label>
+	            <input id="contacts_email" type="email" name="email" placeholder="" autocomplete="off">
+	            <p class="required">обязательное поле</p>
+	            <label for="contacts_tel">Телефон:</label>
+	            <input id="contacts_tel" type="tel" name="tel" placeholder="" autocomplete="off">
+	            <p class="required">обязательное поле</p>
+	            <label for="contacts_message">Сообщение:</label>
+	            <textarea id="contacts_message" name="message" placeholder=""></textarea>
+	            <input type="submit" value="ОТПРАВИТЬ">
+	        </form>
+		</div>
+		<div class="contacts_address">
+			<h4>Реквизиты</h4>
+			<p>Название компании</p>
+			<p>Адрес Москва, ул. Щукина</p>
+			<p class="tel">+7-123-456-78-90</p>
+			<p class="email">mtv@gmail.com</p>
+			<div class="map">
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=zyqzT4Mer2A1FUhirY-LY_4lxAzmhOou&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true">
+	            </script>
+			</div>
+		</div>
+	</div>
+<!-- End Main Content -->
+
+<!-- Main Footer -->
+	<footer class="main_footer">
+		<div class="widget">
+			<ul>
+            	<li><a href="products_page.html">Продукты</a></li>
+                <li><a href="#">Карта покрытия</a></li>
+                <li><a href="#">Партнерам</a></li>
+                <li><a href="contacts_page.html">Контакты</a></li>
+            </ul>
+		</div>
+		<div class="widget">
+			<ul>
+            	<li><a href="receipt_page.html">Рецепты коктейлей</a></li>
+                <li><a href="#">Состав напитков</a></li>
+                <li><a href="#">Оптовый калькулятор</a></li>
+                <li><a href="#">Фото/Видео</a></li>
+            </ul>
+		</div>
+		<div class="widget search_form">
+			<form action="/" method="get">
+                <input type="search" value="" placeholder="Поиск по сайту">
+                <button type="submit" value=""></button>
+            </form>
+		</div>
+		<div class="copyright">
+			<img src="img/main_logo.png" alt="Energydrink">
+			<ul>
+				<li><a href="#"><img src="img/vk_icon.png"></a></li>
+				<li><a href="#"><img src="img/fb_icon.png"></a></li>
+			</ul>
+			<p>©  Дрим  Групп  2017</p>
+		</div>
+	</footer>
+<!-- End Main Footer -->
+
+<!-- Popup Section -->
+<div class="popup">
+	<img src="img/popup_mtv.png">
+	<p>Спасибо, ваша заявка принята.</p>
+	<a href="#" class="popup_close" data-js="close_form"><img src="img/popup_close.png"></a>
+</div>
+<!-- End Popup Section -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/custom.js"></script>
+</body>
+</html>
