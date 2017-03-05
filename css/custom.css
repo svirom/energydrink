@@ -320,6 +320,7 @@ footer.main_footer .copyright img { width: auto; }
 	.popup>img { width: auto; position: absolute; top: 38px; left: 50%; -ms-transform: translate(-50%, 0); -webkit-transform: translate(-50%, 0); -o-transform: translate(-50%, 0); -moz-transform: translate(-50%, 0); transform: translate(-50%, 0);}
 	.popup>p { position: absolute; bottom: 36px; left: 50%; font-size: 22px; color: #FFFFFF; font-weight: 900; -ms-transform: translate(-50%, 0); -webkit-transform: translate(-50%, 0); -o-transform: translate(-50%, 0); -moz-transform: translate(-50%, 0); transform: translate(-50%, 0);}
 	.popup>a { position: absolute; top: 14px; right: 14px; width: 21px; height: 21px; line-height: 1;}
+	.on_send { display: none; position: fixed; top: 50%; left: 50%; width: 100px; height: 200px; margin-left: -50px; margin-top: -100px;}
 	/*---End Popup Window---*/
 @media (max-width: 1199px) {
 	.main.contacts_page .contacts_header { background: url(../img/products_img_n_1.png) 200px center no-repeat;}
@@ -344,5 +345,17 @@ footer.main_footer .copyright img { width: auto; }
 	.popup>p { bottom: 20px; font-size: 17px; text-align: center;}
 }
 /*---End Contacts Page---*/
+
+/*---Partners Page---*/
+.main.partners_page {  background: #0F0F0F; padding: 60px 40px 40px;}
+.main.partners_page>p { margin: 0; font-family: 'Raleway', sans-serif; font-size: 36px; text-align: center; color: #FFFFFF; text-transform: uppercase;}
+.main.partners_page>img { max-width: 1000px; display: block; margin: 0 auto; padding: 0 20px;}
+.main.partners_page .partners_form { width: 390px; margin-top: -120px; margin-left: 160px;}
+.main.partners_page .partners_form p { margin: 0; font-family: 'Raleway', sans-serif; font-size: 24px; font-weight: 600; color: #FFFFFF; line-height: 1; }
+.main.partners_page .partners_form #partners_form { padding-top: 26px; }
+.main.partners_page .partners_form #partners_form input { width: 100%; height: 50px; margin: 0 0 18px; padding-left: 12px; color: #FFFFFF; font-size: 17px; font-weight: 400; border: 4px solid rgba(189, 189, 189, 0.7); background: transparent; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+.main.partners_page .partners_form #partners_form input.error { border: 4px solid red;}
+.main.partners_page h2 { margin: 0; margin-top: 24px; font-family: 'Raleway', sans-serif; font-size: 48px; font-weight: 600; text-align: center; line-height: 1; color: #FFFFFF; text-transform: uppercase;}
+/*---End Partners Page---*/
 
 .main.blanc_page { height: calc(100vh - 196px); background-color: #141414; }

@@ -55,7 +55,11 @@ $(document).ready(function(){
         type: 'POST',
         url: 'sendmail.php',
         data: form_data,
+        beforeSend: function(){
+          $('.on_send').css('display', 'block');
+        },
         success: function() {
+          $('.on_send').css('display', 'none');
           $('.popup').fadeIn(300);
           t.find(fields).each(function() {
             $(this).val('');
@@ -63,6 +67,49 @@ $(document).ready(function(){
           t.find('textarea').val('');
         },
         error: function() {
+          $('.on_send').css('display', 'none');
+          alert("It's not OK");
+        }
+
+      });
+    }
+    return false;
+  }
+
+  //partners form
+  $('#partners_form').submit(send_form2);
+
+  function send_form2() {
+    var t2 = $(this);
+    var fields2 = 'input:not([type="submit"])';
+    event.preventDefault();
+    t2.find(fields2).each(function() {
+      if ($(this).val() == 0) {
+        $(this).addClass('error');
+      } else {
+        $(this).removeClass('error');
+      }
+    });
+    if (t2.find('.error').length > 0) { 
+      return false;
+    } else {
+      var form_data = t2.serialize();
+      $.ajax({
+        type: 'POST',
+        url: 'sendmail2.php',
+        data: form_data,
+        beforeSend: function(){
+          $('.on_send').css('display', 'block');
+        },
+        success: function() {
+          $('.on_send').css('display', 'none');
+          $('.popup').fadeIn(300);
+          t2.find(fields2).each(function() {
+            $(this).val('');
+          });
+        },
+        error: function() {
+          $('.on_send').css('display', 'none');
           alert("It's not OK");
         }
 
