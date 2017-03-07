@@ -118,5 +118,86 @@ $(document).ready(function(){
     return false;
   }
 
+//calculator
+	$('#calc_form .total_weight').text(0);
+	$('#calc_form .total_volume').text(0);
+	$('#calc_form .total_value').text(0);
+	$('#classic_big').val() == 0;
+	$('#classic_small').val() == 0;
+	$('#original_big').val() == 0;
+	$('#original_small').val() == 0;
+	
+	$('#calc_form table').change(function(){
+		var classic_big = $('#classic_big').val();
+		var classic_small = $('#classic_small').val();
+		var original_big = $('#original_big').val();
+		var original_small = $('#original_small').val();
+		var total_weight = 0;
+		var total_volume = 0;
+		var total_value = 0;
+
+		total_weight += parseInt(classic_big*12);
+		$('#calc_form .total_weight').text(total_weight);
+		total_weight += parseInt(classic_small*6);
+		$('#calc_form .total_weight').text(total_weight);
+		total_weight += parseInt(original_big*12);
+		$('#calc_form .total_weight').text(total_weight);
+		total_weight += parseInt(original_small*6); 
+		$('#calc_form .total_weight').text(total_weight);
+
+		total_volume += parseFloat(classic_big*0.1);
+		$('#calc_form .total_volume').text(total_volume.toFixed(1));
+		total_volume += parseFloat(classic_small*0.05);
+		$('#calc_form .total_volume').text(total_volume.toFixed(1));
+		total_volume += parseFloat(original_big*0.1);
+		$('#calc_form .total_volume').text(total_volume.toFixed(1));
+		total_volume += parseFloat(original_small*0.05); 
+		$('#calc_form .total_volume').text(total_volume.toFixed(1));
+
+		total_value += parseInt(classic_big*1872);
+		$('#calc_form .total_value').text(total_value);
+		total_value += parseInt(classic_small*780);
+		$('#calc_form .total_value').text(total_value);
+		total_value += parseInt(original_big*1872);
+		$('#calc_form .total_value').text(total_value);
+		total_value += parseInt(original_small*780); 
+		$('#calc_form .total_value').text(total_value);
+	})
  
+//calc form
+  $('#calc_form').submit(send_form3);
+
+  function send_form3() {
+    var t3 = $(this);
+    var fields3 = 'input:not([type="submit"])';
+    event.preventDefault();
+    
+    var form_data = t3.serialize();
+      $.ajax({
+        type: 'POST',
+        url: 'sendmail3.php',
+        data: form_data,
+        beforeSend: function(){
+          $('.on_send').css('display', 'block');
+        },
+        success: function() {
+          $('.on_send').css('display', 'none');
+          $('.popup').fadeIn(300);
+          t3.find(fields3).each(function() {
+            $(this).val('');
+          });
+          $('#calc_form .total_weight').text(0);
+		  $('#calc_form .total_volume').text(0);
+		  $('#calc_form .total_value').text(0);
+        },
+        error: function() {
+          $('.on_send').css('display', 'none');
+          alert("It's not OK");
+        }
+
+      });
+    
+    return false;
+  }
+
 });
